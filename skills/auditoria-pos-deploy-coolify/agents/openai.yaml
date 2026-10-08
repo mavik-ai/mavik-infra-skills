@@ -1,0 +1,6 @@
+interface:
+  display_name: "Auditoria pós-deploy no Coolify"
+  short_description: "Audite backup, segurança, saúde e monitoramento"
+  default_prompt: "Use $auditoria-pos-deploy-coolify para auditar meus projetos no Coolify e apresentar evidências, riscos e próximas ações."
+policy:
+  allow_implicit_invocation: true

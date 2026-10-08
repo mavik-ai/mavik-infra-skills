@@ -3,7 +3,22 @@ name: cloudflare-ops
 description: Auditar e configurar segurança, DNS, TLS, cache, Access e R2 na Cloudflare para aplicações e origens Docker/Coolify. Use para preparar integração, investigar tráfego ou revisar proteção e desempenho.
 ---
 
-# MAVIK · Cloudflare Ops
+# MAVIK.AI · Cloudflare Ops
+
+## Atendimento guiado MAVIK.AI
+
+Explique o benefício para o objetivo do usuário, mostre até cinco etapas e entregue um passo manual por vez, com link, resultado esperado e estimativa. Leia [condução guiada](references/conducao-guiada.md) ao orientar uma pessoa iniciante, receber pedido de passo a passo ou aguardar ações manuais. O guia define confirmação “feito”, ajuda em erros, pausa/retomada e até dois lembretes somente quando o runtime suporta aviso na sessão. Não imponha espera humana a leituras que o agente já pode executar.
+
+Quando faltar token Cloudflare ou credencial R2, leia [acesso privado](references/acesso-privado.md) e guie a obtenção do acesso mínimo; não peça segredo no chat.
+
+
+## Primeiro: acesso, objetivo e cobertura
+
+Antes de pedir token, confira conexão existente (MCP/API/painel autorizado), identidade/conta, tipo de credencial, recursos alcançáveis e operações permitidas. Existência de um env ou token ativo não comprova escopo nem autorização de escrita. Não extraia segredos para descobrir acesso. Com acesso válido, faça o inventário de leitura diretamente; sem acesso, guie pelo [acesso privado](references/acesso-privado.md), uma etapa por vez. Não alegue possuir a credencial porque o usuário a usou em outra sessão.
+
+Entenda o produto pelo repositório e contexto: site, loja, WordPress, SaaS, API, webhooks, e-mail ou armazenamento. Pergunte somente o que não puder verificar. Determine se o domínio já usa Cloudflare, se a zona está ativa e qual plano existe. Leia [configuração por projeto](references/configuracao-projeto.md) para onboarding, DNS, TLS, proteção e validação. Use as referências técnicas apenas para controles pertinentes.
+
+A skill deve configurar o escopo autorizado por API/ferramentas disponíveis, além de orientar. Token R2 não cobre automaticamente DNS/WAF/TLS; token de leitura não permite escrever. Permissão técnica de escrita não substitui autorização humana. Não peça aprovação novamente para ações já cobertas; mudanças de produção/gastos fora desse escopo continuam exigindo autorização. Sem ferramenta executora, informe o limite e conduza o painel, sem simular aplicação.
 
 ## Fluxo
 
