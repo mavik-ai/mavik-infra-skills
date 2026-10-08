@@ -10,7 +10,7 @@ import tempfile
 from uuid import uuid4
 
 
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 SOURCE_ROOT = Path(__file__).resolve().parent.parent
 SKILLS = ("coolify-ops", "cloudflare-ops", "auditoria-pos-deploy-coolify")
 REQUIRED = ("README.md", "SKILL.md", "agents/openai.yaml")

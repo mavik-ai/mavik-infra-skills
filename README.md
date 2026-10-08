@@ -268,3 +268,7 @@ O pacote segue SemVer, com mudanças por skill no changelog. A distribuição st
 **MAVIK.AI · Infra Skills** — documentação operacional e habilidades reutilizáveis para quem constrói e mantém aplicações com IA.
 
 [Changelog](CHANGELOG.md) · [Segurança](SECURITY.md) · [Contribuir](CONTRIBUTING.md) · [Licença](LICENSE)
+
+## Cloudflare Ops: cobertura preparada em 1.3.0
+
+Consulte o [catálogo de recursos](skills/cloudflare-ops/references/catalogo-atual.md) e o [guia de configuração e validação](skills/cloudflare-ops/references/configuracao-recursos.md). A versão 1.3.0 está preparada neste código; os comandos acima continuam fixados na release publicada 1.2.0 até publicação de nova tag.

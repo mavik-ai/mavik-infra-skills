@@ -20,6 +20,14 @@ Entenda o produto pelo repositório e contexto: site, loja, WordPress, SaaS, API
 
 A skill deve configurar o escopo autorizado por API/ferramentas disponíveis, além de orientar. Token R2 não cobre automaticamente DNS/WAF/TLS; token de leitura não permite escrever. Permissão técnica de escrita não substitui autorização humana. Não peça aprovação novamente para ações já cobertas; mudanças de produção/gastos fora desse escopo continuam exigindo autorização. Sem ferramenta executora, informe o limite e conduza o painel, sem simular aplicação.
 
+## Checklist para negócios
+
+Para planejar cobertura da conta ou escolher permissões, use o [checklist para negócios](references/checklist-negocios.md). Avalie as cinco frentes, selecione controles aplicáveis e separe permissões de base dos módulos opcionais.
+
+## Catálogo atual e configuração correta
+
+Para pedidos de cobertura ampla, consulte o [catálogo de produtos e guias](references/catalogo-atual.md). Selecione pelo objetivo, sem ativar tudo. Use [configuração e validação dos recursos](references/configuracao-recursos.md) para controles usuais; produtos adicionais exigem leitura do setup oficial específico antes de aplicar. Confira plano, beta, escopo do token e dependências de código/servidor. Não prometa suporte executor universal nem confunda visão geral documental com homologação real.
+
 ## Fluxo
 
 Identifique a conta, zona, plano, ambiente, hostnames e origem autorizados. Reutilize inventário do projeto; não fixe domínio/IP/fornecedor. Descubra stack real, rotas públicas/autenticadas, webhooks, upload e streaming. Pesquisa não comprova configuração atual.
@@ -31,6 +39,10 @@ Leia [segurança](references/security.md) ao revisar origem, identidade e abuso;
 Relate tabela Status | Controle | Evidência | Benefício/risco | Ação. Separe observado, proposta, aplicado e testado. Antes de escrever, apresente alvo, diff, impacto em outras aplicações/zonas, custo e rollback. Execute somente mudanças autorizadas; publicação, gasto e exclusão de dados exigem escopo explícito. Evite alteração em lote de zonas e retry ilimitado.
 
 Após mudança, valide acesso legítimo e proteção desejada. DNS propagado não comprova aplicação saudável. Não induza DDoS, ataque ou queda sem escopo específico. Atualize o runbook do projeto sem segredos. Finalize com controles comprovados e dependências reais.
+
+## Quando configurar e testar
+
+Use [momento de execução e bateria prática](references/testes-e-momento.md) para planejar ou validar DNS, proteção contra bots/IA e rollout. Teste DNS não homologa WAF/IA; teste Siteverify não homologa integração da aplicação.
 
 ## Integração com Coolify
 

@@ -2,6 +2,14 @@
 
 SemVer para o pacote. Cada entrada identifica a skill alterada.
 
+## [1.3.0] - 2026-10-08
+
+### Documentação
+- cloudflare-ops: catálogo das 138 entradas oficiais, finalidade e caminho de configuração; guia de pré-requisitos, disponibilidade, validação e riscos dos controles usuais.
+- Checklist de negócios, distinção entre token geral e R2/S3, acesso privado e bateria de testes por momento da operação.
+- Cobertura documental não significa leitura integral, suporte universal do token ou homologação dos produtos; nenhuma configuração de produção incluída.
+- Regra de encerramento: atualizar documentação/changelog, versionar, executar gates e sincronizar por commit e push ao concluir cada tarefa autorizada.
+
 ## [1.2.0] - 2026-10-08
 
 ### Adicionado
