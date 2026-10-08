@@ -1,0 +1,7 @@
+interface:
+  display_name: "MAVIK · Coolify Ops"
+  short_description: "Backup, segurança e auditoria pós-deploy no Coolify"
+  brand_color: "#6D28D9"
+  default_prompt: "Use $coolify-ops para auditar um projeto no Coolify e apresentar evidências, riscos e correções necessárias."
+policy:
+  allow_implicit_invocation: true

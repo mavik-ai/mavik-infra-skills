@@ -1,0 +1,7 @@
+interface:
+  display_name: "MAVIK · Cloudflare Ops"
+  short_description: "Segurança, cache e operação Cloudflare para projetos"
+  brand_color: "#FC4C13"
+  default_prompt: "Use $cloudflare-ops para auditar a borda do projeto e apresentar segurança, desempenho, custos e mudanças propostas."
+policy:
+  allow_implicit_invocation: true
