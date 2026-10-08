@@ -2,6 +2,17 @@
 
 SemVer para o pacote. Cada entrada identifica a skill alterada.
 
+## [1.1.0] - 2026-10-08
+
+### Documentação
+- cloudflare-ops: conexão/permissões como primeiro passo, onboarding de domínio, configuração por produto/plano, tutorial R2 separado de DNS/TLS/WAF e gates de validação de fluxos.
+- As três skills agora conduzem iniciantes com benefício, visão geral curta, um passo manual por vez, obtenção privada de acesso e pausa/retomada. Lembretes limitados a dois por espera e condicionados ao runtime.
+- Apresentação MAVIK.AI com marca ASCII, catálogo, instalação Codex/Claude Code, exemplos de uso e README por skill.
+- Pedido copiável de instalação assistida para iniciantes, com descoberta da ferramenta e tratamento explícito de compatibilidade e skills não publicadas.
+
+### Adicionado
+- auditoria-pos-deploy-coolify: auditoria somente leitura dos quatro pilares, com evidências e pendências por responsável; reaproveitamento opcional do helper coolify-ops. Não instala monitoramento contínuo.
+
 ## [1.0.0] - 2026-10-08
 
 ### Adicionado

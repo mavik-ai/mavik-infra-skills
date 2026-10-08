@@ -1,4 +1,4 @@
-# MAVIK · Coolify Ops
+# MAVIK.AI · Coolify Ops
 
 Skill para Codex e Claude Code: auditoria pós-deploy e operação assistida de segurança, backup, recuperação, saúde e alertas em projetos Docker/Coolify.
 

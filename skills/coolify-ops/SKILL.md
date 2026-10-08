@@ -5,6 +5,13 @@ description: Auditar projetos Docker/Coolify após deploy e operar backup, segur
 
 # Operação do Coolify
 
+## Atendimento guiado MAVIK.AI
+
+Explique o benefício para o objetivo do usuário, mostre até cinco etapas e entregue um passo manual por vez, com link, resultado esperado e estimativa. Leia [condução guiada](references/conducao-guiada.md) ao orientar uma pessoa iniciante, receber pedido de passo a passo ou aguardar ações manuais. O guia define confirmação “feito”, ajuda em erros, pausa/retomada e até dois lembretes somente quando o runtime suporta aviso na sessão. Não imponha espera humana a leituras que o agente já pode executar.
+
+Quando faltar token Coolify, leia [acesso privado](references/acesso-privado.md) e conduza apenas a etapa atual; não peça segredo no chat.
+
+
 ## Pós-deploy e cuidado dos projetos
 
 Ao concluir deploy Coolify conduzido pelo agente, ou quando solicitado revisar um recurso, execute a auditoria antes de encerrar a entrega. Não transforme deploy saudável em aprovação de segurança. Leia [checklist pós-deploy](references/post-deploy.md); para integrar a chamada a pipeline ou monitoramento, leia [hook e alertas](references/hooks.md).
