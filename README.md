@@ -29,6 +29,26 @@ Cada pasta é uma skill. Instale uma, duas ou todas conforme sua necessidade. A 
 
 ## Instalação
 
+### Automática: três skills de uma vez
+
+Requer **Git e Python 3.10+** no computador. Baixe a release fixa e escolha onde instalar:
+
+```bash
+git clone --branch v1.2.0 https://github.com/mavik-ai/mavik-infra-skills.git
+cd mavik-infra-skills
+python3 scripts/install.py --target both
+```
+
+| Opção | Destino |
+|---|---|
+| `--target codex` | Codex: `~/.codex/skills/` ou `CODEX_HOME/skills/` quando configurado |
+| `--target claude` | Claude Code: `~/.claude/skills/` |
+| `--target both` | As três skills nas duas ferramentas |
+
+O instalador copia pastas completas; não precisa de token nem configura servidores. Se alguma skill já existir, ele interrompe sem substituir nenhuma. Para atualizar, revise as diferenças e rode o mesmo comando com `--update`: as instalações anteriores ficam em backup fora dos diretórios de descoberta. Links simbólicos são recusados e devem ser revisados manualmente.
+
+Abra uma nova sessão após instalar. No Codex use `$coolify-ops`; no Claude Code use `/coolify-ops`. Troque o nome para as demais skills. Veja [atualização, recuperação e diagnóstico](docs/INSTALLATION.md).
+
 ### Sem usar o terminal: copie e cole no seu agente
 
 Abra uma conversa no **Claude Code, Codex ou AgY** que tenha acesso aos arquivos do seu computador. Copie o texto inteiro abaixo, cole na conversa e envie. Você não precisa executar comandos manualmente.
@@ -48,9 +68,11 @@ de skills quando disponível. Use o formato e o diretório suportados por
 esta ferramenta, sem presumir que o caminho de outra ferramenta funciona.
 
 Leia o README do repositório e inspecione cada skill antes de instalá-la.
-Use uma revisão publicada que contenha as três pastas em skills/.
-Copie cada pasta completa, com suas referências e scripts.
-Não execute scripts do repositório apenas para instalar as skills.
+Use a tag publicada v1.2.0 e inspecione scripts/install.py.
+Para instalar o pacote completo, execute o instalador local com
+--target codex, --target claude ou --target both, conforme minha ferramenta.
+No Codex, o instalador nativo continua sendo uma alternativa válida.
+Não execute scripts de auditoria nem configure infraestrutura na instalação.
 Não substitua habilidades existentes sem me apresentar as diferenças.
 Não configure servidores, credenciais ou serviços externos.
 
@@ -64,22 +86,22 @@ Ao terminar, confira os arquivos instalados e me diga:
 3. Um pedido pronto para eu copiar e usar cada habilidade.
 ```
 
-**Depois de instalar**, abra uma nova conversa se o agente orientar e copie um dos [pedidos de uso](#primeiro-uso). Para instalar somente uma skill, deixe apenas o nome dela na lista do pedido acima.
+**Depois de instalar**, abra uma nova conversa se o agente orientar e copie um dos [pedidos de uso](#primeiro-uso). Para instalar somente uma skill, deixe apenas seu nome na lista e peça o instalador nativo do Codex ou a cópia manual da pasta completa. `scripts/install.py` instala sempre as três skills.
 
 Isso requer um agente com acesso a arquivos e instalação de skills. Uma conversa comum no site do Claude ou ChatGPT não instala arquivos no seu computador. No AgY, o pedido orienta o agente a conferir o suporte e o caminho corretos antes de instalar; a compatibilidade ainda não foi testada neste projeto.
 
-A release `v1.1.0` inclui as três skills. Consulte o [guia de instalação](docs/INSTALLATION.md) e os arquivos da release.
+A release `v1.2.0` inclui as três skills e o instalador automático. Consulte o [guia de instalação](docs/INSTALLATION.md) e os arquivos da release.
 
 ### Instalação manual, para quem prefere o terminal
 
 ### 1. Baixe o repositório
 
 ```bash
-git clone --branch v1.1.0 https://github.com/mavik-ai/mavik-infra-skills.git
+git clone --branch v1.2.0 https://github.com/mavik-ai/mavik-infra-skills.git
 cd mavik-infra-skills
 ```
 
-Para uma instalação reproduzível, escolha uma tag ou commit que contenha a skill desejada. A tag `v1.1.0` inclui as três skills; `v1.0.0` contém somente Coolify Ops e Cloudflare Ops. Consulte o [changelog](CHANGELOG.md) e as [releases](https://github.com/mavik-ai/mavik-infra-skills/releases).
+Para uma instalação reproduzível, escolha uma tag ou commit que contenha a skill desejada. As tags `v1.1.0` e `v1.2.0` incluem as três skills; `v1.0.0` contém somente Coolify Ops e Cloudflare Ops. Consulte o [changelog](CHANGELOG.md) e as [releases](https://github.com/mavik-ai/mavik-infra-skills/releases).
 
 ### 2. Copie a skill para seu agente
 
@@ -218,6 +240,7 @@ mavik-infra-skills/
 ├── CHANGELOG.md               Histórico por skill
 ├── CONTRIBUTING.md            Como contribuir
 ├── SECURITY.md                Como reportar problemas
+├── scripts/install.py         Instalador automático do pacote
 ├── .github/workflows/ci.yml   Validação do pacote
 └── skills/
     ├── coolify-ops/           Guia, referências e helper
@@ -231,7 +254,8 @@ Cada skill possui `SKILL.md` para instruções do agente, `agents/openai.yaml` p
 
 ```bash
 python3 -m unittest discover -s skills/coolify-ops/scripts -p 'test_*.py'
-python3 -m compileall -q skills/coolify-ops/scripts
+python3 -m unittest discover -s scripts -p 'test_*.py'
+python3 -m compileall -q skills/coolify-ops/scripts scripts
 git diff --check
 ```
 

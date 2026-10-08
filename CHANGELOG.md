@@ -2,6 +2,17 @@
 
 SemVer para o pacote. Cada entrada identifica a skill alterada.
 
+## [1.2.0] - 2026-10-08
+
+### Adicionado
+- Instalador automático Python para as três skills no Codex, Claude Code ou ambos; respeita CODEX_HOME quando configurado.
+- Atualização explícita com backup fora da descoberta e recuperação em caso de falha durante a troca.
+- Testes isolados do instalador incorporados ao CI.
+
+### Documentação
+- Comandos de instalação, pedido copiável para o agente, atualização, backup e diagnóstico.
+- Instalação não requer tokens nem altera infraestrutura; sessões reais dos agentes permanecem uma validação separada.
+
 ## [1.1.0] - 2026-10-08
 
 ### Documentação
