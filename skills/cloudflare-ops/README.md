@@ -1,6 +1,6 @@
 # MAVIK.AI · Cloudflare Ops
 
-Skill independente de auditoria e operação assistida da Cloudflare. Parte do pacote v1.1.0, PT-BR, MIT. Não é produto oficial Cloudflare.
+Skill independente de auditoria e operação assistida da Cloudflare. Parte do pacote v1.2.0, PT-BR, MIT. Não é produto oficial Cloudflare.
 
 ## O que ela resolve
 
