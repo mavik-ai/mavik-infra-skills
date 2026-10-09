@@ -51,7 +51,7 @@ class InstallerTests(unittest.TestCase):
     def test_both_installs_six_complete_folders(self):
         code, output, error = self.run_cli("--target", "both")
         self.assertEqual(code, 0, error)
-        self.assertIn("1.2.0", output)
+        self.assertIn("1.3.0", output)
         self.assertIn("nova sessão", output)
         self.assertEqual(output.count("Instalada:"), 6)
         for target in ("codex", "claude"):

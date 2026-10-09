@@ -50,3 +50,16 @@ Para inserir pelo terminal, confirme que a entrada é diretamente humana, oculta
 Depois de a pessoa responder feito, valide somente leitura no recurso autorizado. Relate sucesso/falha sem resposta bruta. Token ativo não comprova acesso aos recursos; permissões insuficientes não justificam pedir acesso total. Se um segredo foi exposto, explique a necessidade de revogação e substituição, respeitando o escopo autorizado.
 
 Fonte consultada em 08/10/2026: [criação de API token](https://developers.cloudflare.com/fundamentals/api/get-started/create-token/). Revalidar navegação e permissões no uso.
+
+
+## Caminho confirmado pelo usuário: token geral da conta
+
+Em 08/10/2026, Rafael confirmou o percurso no painel:
+
+1. Abrir o dashboard e selecionar a conta correta.
+2. Gerenciar conta → Tokens de API da conta → Criar token.
+3. Informar um nome identificável e escolher a política de permissões. Para o fluxo padrão da skill, usar Começar do zero / Custom e selecionar grupos pertinentes ao checklist de negócios.
+4. Revisar recursos, validade e resumo; gerar o token.
+5. Copiar o token diretamente para armazenamento privado, como CLOUDFLARE_API_TOKEN em arquivo local ignorado pelo Git. Não colar na conversa, relatório ou repositório.
+
+O usuário também observou o modelo Full account and zone access. É uma opção de acesso amplo, não requisito da skill e não garante compatibilidade com todos os produtos. O painel apresentou erro de limite de 1–300 grupos de permissão em uma tentativa anterior; a quantidade efetiva não foi confirmada. Se ocorrer, usar política personalizada com os grupos necessários, sem repetir a mesma tentativa indefinidamente. Não publicar links com identificadores da conta como exemplos universais.
